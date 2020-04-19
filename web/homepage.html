@@ -9,11 +9,24 @@
 <body>
     <h1>Jared Green's Homepage</h1>
     <hr>
-    <div class="hasButton"
-    <input type="button" value="Assignments" onclick="window.location.href = 'homework.html'">
+    <div class="hasButton">
+    <input type="button" value="Assignments" onclick="window.location.href = 'assignments.html'">
     </div>
-    </form>
+    </form id="form1">
     <p>My name is Jared Green, I am a 19 year old student majoring in software engineering. 
-        I am from the Detroit are of Michigan.</p>
+        I am from the Detroit area of Michigan.</p>
+        <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="placeholder" class="image">
+        <br>
+        <form action="homepage.php" method="get">
+            Name: <input type="text" name="name"><br>
+            <input type="submit">
+        </form>
 </body>
+
+<script>
+    function clear() {
+        var form = document.getElementById("form1");
+        form.reset();
+    }
+</script>
 </html>

@@ -6,6 +6,23 @@ body {
     color: #00c0c0;
 }
 
+ul {
+    text-align: center;
+    list-style: inside;
+    font-size: medium;
+    color: #00c0c0;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    text-align: center;
+}
+
 h1 {
     text-align: center;
     color: #00c0c0;
