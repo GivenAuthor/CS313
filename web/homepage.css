@@ -1,0 +1,22 @@
+body {
+    background-color: #222222;
+}
+.hasButton {
+    text-align: center;
+    color: #00c0c0;
+}
+
+h1 {
+    text-align: center;
+    color: #00c0c0;
+}
+
+hr {
+    border: #00c0c0;
+}
+
+p {
+    font-size: medium;
+    color: #00c0c0;
+    text-align: center;
+}
