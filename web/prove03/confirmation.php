@@ -8,8 +8,8 @@ echo("
     <title>Confirmation</title>
 </head>
 <body>
-    <h1>Confirm Order</h1>);
-    echo (Your items will be delivered to:");
+    <h1>Confirm Order</h1>");
+    echo("Your items will be delivered to:");
     echo $_POST["street"]; echo("<br>"); echo $_POST["city"]; ("<br>"); echo $_POST["state"]; ("<br>"); echo $_POST["zip"];
     echo("<br>
     <p>Your order includes:</p>");

@@ -25,10 +25,10 @@ echo("
     }
     echo("
     <br>
-    <form action='Checkout.php'>
+    <form action='checkout.php'>
         <input type='submit' name='submit' value='Add To Cart'>
     </form>
-    <a href='prove-03.html'>Browse More</a>
+    <a href='home.php'>Browse More</a>
 </body>
 </html>");
 ?>
