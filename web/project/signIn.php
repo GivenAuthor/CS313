@@ -49,6 +49,7 @@ catch (PDOException $ex)
     $username = $_POST["name"];
     $password = $_POST["passwd"];
     $stmt = $this->pdo->query('SELECT username FROM user_name WHERE user_name = $username');
+    $stmt2 = $this->pdo0>query('SELECT password_contents FROM account_password WHERE account_password = $passwd');
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>

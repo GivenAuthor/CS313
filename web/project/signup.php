@@ -22,4 +22,42 @@ echo("
 </body>
 </html>
 ");
+
+function SIGNuP() {
+    try
+{
+    // REPLACE THIS WITH ENTERED INFO
+  $user = 'postgres';
+  $password = 'password';
+  $db = new PDO('pgsql:host=localhost;dbname=postgresql-fitted-13004', $user, $password);
+}
+catch (PDOException $ex)
+{
+  echo 'Error!: ' . $ex->getMessage();
+  die();
+}
+
+// with given info from user
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    
+    try {
+    $sql = "INSERT INTO user_name (username) VALUES ($username)";
+    $conn->exec($sql);
+    echo "Username created";
+    }
+    catch(PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+    }
+
+    try {
+        $sql = "INSERT INTO account_password (password_contents) VALUES ($password)";
+        $conn->exec($sql);
+        echo "Password created";
+        }
+        catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+}
+
 ?>

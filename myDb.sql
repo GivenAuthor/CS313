@@ -3,7 +3,7 @@ CREATE TABLE account_password(
 	password_contents VARCHAR (30) NOT NULL
 );
 
-CREATE TABLE user(
+CREATE TABLE user_name (
 	user_id serial PRIMARY KEY,
 	username VARCHAR (50) UNIQUE NOT NULL,
 	CONSTRAINT username_id_fkey FOREIGN KEY (user_id)

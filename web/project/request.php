@@ -26,6 +26,5 @@ function getData() {
 
         $stmt1 = $this->pdo->query('SELECT * FROM note WHERE note_id = note_id');
         $note = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
 }
 ?>
