@@ -8,7 +8,7 @@ echo("
     <title>Submission</title>
 </head>
 <body>
-    <form>
+    <form method='post' action='submit()'>
     <label for='date'>Date:</label>
     <input type='date' id='date'>
     <br>
@@ -25,6 +25,7 @@ echo("
 ");
 
 function submit() {
+    echo("Submit called");
     $date = $_POST[date];
     $rate = $_POST[rating];
     $note = $_POST[note];
@@ -72,6 +73,7 @@ function submit() {
         catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
+    echo('<p>Submitted</p>');
 }
 
 ?>

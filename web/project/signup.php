@@ -16,14 +16,14 @@ echo("
     <label for='passwd'>Password:</label>
     <input type='password' id='passwd'>
     <br>
-    <form action='signIn.html' method='POST'>
+    <form action='signIn.php' method='POST'>
         <button>Return to sign in</button>
     </form>
 </body>
 </html>
 ");
 
-function SIGNuP() {
+function signUp() {
     try
 {
     // REPLACE THIS WITH ENTERED INFO

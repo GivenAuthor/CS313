@@ -9,14 +9,29 @@ echo("
 </head>
 <body>
     <h1>Previous data</h1>
-    <form action='getData' method='POST'>
-    <input type='submit' value='fecth data'> 
+    <form method='post' action'getData()'>
+    <input type='submit' value='fetch data'> 
     </form>
 </body>
 </html>
 ");
 
 function getData() {
+
+// connect
+    try
+    {
+        // REPLACE THIS WITH ENTERED INFO
+      $user = 'postgres';
+      $password = 'password';
+      $db = new PDO('pgsql:host=localhost;dbname=postgresql-fitted-13004', $user, $password);
+    }
+    catch (PDOException $ex)
+    {
+      echo 'Error!: ' . $ex->getMessage();
+      die();
+    }
+
     // get dates, ratings, and notes
         $stmt = $this->pdo->query('SELECT * FROM day');
         $days = $stmt->fetchAll(PDO::FETCH_ASSOC);
