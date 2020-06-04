@@ -21,7 +21,7 @@ echo("Submit called");
     try
     {
         // REPLACE THIS WITH ENTERED INFO
-      $user = 'jared';
+      $user = 'postgres';
       $password = '1Wickles';
       $db = new PDO('pgsql:host=localhost;dbname=DATABASE_URL', $user, $password);
     }
