@@ -17,13 +17,19 @@ echo("Submit called");
     $rate = $_POST[rating];
     $note = $_POST[note];
 
+    $dbHost = $dbOpts["host"];
+    $dbPort = $dbOpts["port"];
+    $dbUser = $dbOpts["user"];
+    $dbPassword = $dbOpts["pass"];
+    $dbName = ltrim($dbOpts["path"],'/');
+
     // connect
     try
     {
         // REPLACE THIS WITH ENTERED INFO
       $user = 'postgres';
       $password = '1Wickles';
-      $db = new PDO("pgsql:host=localhost;port=5432;dbname=postgresql", $user, $password);
+      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $user, $password);
     }
     catch (PDOException $ex)
     {
