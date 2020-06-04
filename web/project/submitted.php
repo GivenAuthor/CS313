@@ -12,7 +12,6 @@ echo("
     </form>
 ");
 
-echo("Submit called");
     $date = $_POST[date];
     $rate = $_POST[rating];
     $note = $_POST[note];
@@ -29,7 +28,7 @@ echo("Submit called");
         // REPLACE THIS WITH ENTERED INFO
       $user = 'postgres';
       $password = '1Wickles';
-      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $user, $password);
+      $db = new PDO("pgsql:host=$dbHost;port=5432;dbname=$dbName", $user, $password);
     }
     catch (PDOException $ex)
     {
