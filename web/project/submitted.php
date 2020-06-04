@@ -22,8 +22,8 @@ echo("Submit called");
     {
         // REPLACE THIS WITH ENTERED INFO
       $user = 'postgres';
-      $password = 'password';
-      $db = new PDO('pgsql:host=localhost;dbname=postgresql-fitted-13004', $user, $password);
+      $password = '1Wickles';
+      $db = new PDO('pgsql:host=postgres://miryuwcdxtqwty:1144860447695f081b648c1b623a6bd928379c4a3093e3861812adf0dd057dd1@ec2-3-216-129-140.compute-1.amazonaws.com:5432/d66ncbj1to71jp;dbname=DATABASE_URL', $user, $password);
     }
     catch (PDOException $ex)
     {
