@@ -13,7 +13,7 @@ echo("
     <button>Add data for today</button>
     </form>
     <br>
-    <form action='requestedInfo.php' method='POST'>
+    <form action='requested.php' method='POST'>
     <button>See previous days</button>
     </form>
 </body>
