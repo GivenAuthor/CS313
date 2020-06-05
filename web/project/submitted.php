@@ -29,7 +29,7 @@ echo("Submit called");
         // REPLACE THIS WITH ENTERED INFO
       $user = 'postgres';
       $password = '1Wickles';
-      $db = new PDO('pgsql:host=localhost;port=5432;dbname=postgresql-fitted-13004', $user, $password);
+      $db = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=postgresql-fitted-13004', $user, $password);
     }
     catch (PDOException $ex)
     {
