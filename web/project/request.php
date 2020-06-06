@@ -37,16 +37,16 @@ try
   try
   {
     $queryDay = $db->prepare('SELECT * FROM day');
-    $queryDay->execute();
-    echo json_encode($queryDay);
+    $responseDay = $queryDay->execute();
+    echo json_encode($responseDay);
 
     $queryRating = $db->prepare('SELECT * FROM rating');
-    $queryRating->execute();
-    echo json_encode($queryRating);
+    $responseRating = $queryRating->execute();
+    echo json_encode($responseRating);
 
     $queryNote = $db->prepare('SELECT * FROM note');
-    $queryNote->execute();
-    echo json_encode($queryNote);
+    $resonseNote = $queryNote->execute();
+    echo json_encode($responseNote);
 
   }
   catch (PDOException $ex) {
