@@ -36,11 +36,11 @@ try
 
   $sql = "SELECT day_date FROM day";
   $result = $db->query($sql);
-  echo($result.toString());
+  echo($result);
 
   $stmt = $this->pdo->query('SELECT day_date FROM day');
   $days = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  echo($days);
+  echo json_encode($days);
 
   $stmt1 = $this->pdo->query('SELECT day_rating FROM rating WHERE rating_id = day_id');
   $rating = $stmt->fetchAll(PDO::FETCH_ASSOC);
