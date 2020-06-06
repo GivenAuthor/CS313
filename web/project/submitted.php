@@ -36,14 +36,13 @@ try
     echo 'Error!: ' . $ex->getMessage();
     die();
   }
-  $date = date('Y-m-d', strtotime($_GET['date']));
-    //$date = $_GET['date'];
+    $date = date('Y-m-d', strtotime($_GET['date']));
     $rate = $_GET['rating'];
     $note = $_GET['note'];
-    echo($date);
+
     // insert the rating for the day
     try {
-        $sql = "INSERT INTO rating (day_rating) VALUES ($rating)";
+        $sql = "INSERT INTO rating ('day_rating') VALUES ($rating)";
         $conn->exec($sql);
         echo "<p>rating aded</p>";
         }
