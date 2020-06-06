@@ -1,10 +1,4 @@
 <?php
-
-$date = $_GET[date];
-$rate = $_GET[rating];
-$note = $_GET[note];
-echo("<p>$date $rate $note</p>");
-
 echo("
 <!DOCTYPE html>
 <html lang='en'>
@@ -19,9 +13,9 @@ echo("
     <button type='submit'>To homepage</button>
     </form>
 ");
-    $date = $_POST[date];
-    $rate = $_POST[rating];
-    $note = $_POST[note];
+    $date = $_POST['date'];
+    $rate = $_POST['rating'];
+    $note = $_POST['note'];
     echo("<p>$date $rate $note</p>");
 
     // insert the date
@@ -53,5 +47,5 @@ echo("
         catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
-    echo('<p>Submitted</p>');
+    echo('<p>Submitted</p></body></html>');
 ?>
