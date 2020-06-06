@@ -40,10 +40,12 @@ try
     $date = $_GET['date'];
     $rate = $_GET['rating'];
     $note = $_GET['note'];
+    echo($date);
+    echo($_GET['date']);
 
     // insert the date
     try {
-        $sql = "INSERT INTO day (day_date) VALUES ($_GET['date'])";
+        $sql = "INSERT INTO day (day_date) VALUES ($date)";
         $conn->exec($sql);
         echo "date added";
         }
@@ -53,7 +55,7 @@ try
     
     // insert the rating for the day
     try {
-        $sql = "INSERT INTO rating (day_rating) VALUES ($_GET['rating'])";
+        $sql = "INSERT INTO rating (day_rating) VALUES ($rating)";
         $conn->exec($sql);
         echo "rating aded";
         }
@@ -63,7 +65,7 @@ try
 
     // insert the notes for the day
     try {
-        $sql = "INSERT INTO note (note_contents) VALUES ($_GET['note'])";
+        $sql = "INSERT INTO note (note_contents) VALUES ($note)";
         $conn->exec($sql);
         echo "<p>note added</p>";
         }
