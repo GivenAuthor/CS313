@@ -70,5 +70,5 @@ try
         catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
-    ec ho('<p>Submitted</p></body></html>');
+    echo('<p>Submitted</p></body></html>');
 ?>
