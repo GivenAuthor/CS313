@@ -1,4 +1,23 @@
 <?php
+
+$query = $db->prepare('SELECT * FROM day');
+    $query->execute();
+    $days = $query->fetchAll(PDO::FETCH_ASSOC);
+    echo json_encode($days);
+
+  $stmt = $this->pdo->query('SELECT * FROM day');
+  $days = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  echo($days);
+
+  $stmt1 = $this->pdo->query('SELECT * FROM rating WHERE rating_id = day_id');
+  $rating = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  echo("<br>");
+  echo($rating);
+
+  $stmt1 = $this->pdo->query('SELECT * FROM note WHERE note_id = note_id');
+  $note = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  echo("<br>");
+  echo($note);
 echo("
 <!DOCTYPE html>
 <html lang='en'>
@@ -10,24 +29,5 @@ echo("
 <body>
     <h1>Previous day's data</h1>
 ");
-    // get dates, ratings, and notes
-    $query = $db->prepare('SELECT * FROM day');
-    $query->execute();
-    $days = $query->fetchAll(PDO::FETCH_ASSOC);
-    echo json_encode($days);
-
-        $stmt = $this->pdo->query('SELECT * FROM day');
-        $days = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        echo($days);
-
-        $stmt1 = $this->pdo->query('SELECT * FROM rating WHERE rating_id = day_id');
-        $rating = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        echo("<br>");
-        echo($rating);
-
-        $stmt1 = $this->pdo->query('SELECT * FROM note WHERE note_id = note_id');
-        $note = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        echo("<br>");
-        echo($note);
 echo("</body></html>")
 ?>
