@@ -19,7 +19,7 @@ echo("
 
         $stmt1 = $this->pdo->query('SELECT * FROM rating WHERE rating_id = day_id');
         $rating = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        echo("<br>");
+        echo("<p>Hello</p>");
         echo($rating);
 
         $stmt1 = $this->pdo->query('SELECT * FROM note WHERE note_id = note_id');
