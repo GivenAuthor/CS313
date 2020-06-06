@@ -44,7 +44,7 @@ try
 
     // insert the date
     try {
-        $sql = "INSERT INTO day (day_date) VALUES ($date)";
+        $sql = "INSERT INTO day ('day_date') VALUES (TO_DATE($date, 'DD/MM/YYYY'))";
         $conn->exec($sql);
         echo "<p>date added</p>";
         }
@@ -64,7 +64,7 @@ try
 
     // insert the notes for the day
     try {
-        $sql = "INSERT INTO note (note_contents) VALUES ($note)";
+        $sql = "INSERT INTO note (note_contents) VALUES ($note);";
         $conn->exec($sql);
         echo "<p>note added</p>";
         }
