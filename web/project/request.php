@@ -41,12 +41,12 @@ try
     $responseDay = $queryDay->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($responseDay);
 
-    $queryRating = $db->prepare('SELECT * FROM rating');
+    $queryRating = $db->prepare("SELECT * FROM rating");
     $queryRating->execute();
     $responseRating = $queryRating->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($responseRating);
 
-    $queryNote = $db->prepare('SELECT * FROM note');
+    $queryNote = $db->prepare("SELECT * FROM note");
     $queryNote->execute();
     $resonseNote = $queryNote->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($responseNote);
