@@ -8,7 +8,7 @@ echo("
     <title>Submission</title>
 </head>
 <body>
-    <form method='post' action='submitted.php'>
+    <form method='get' action='submitted.php'>
     <label for='date'>Date:</label>
     <input type='date' id='date'>
     <br>

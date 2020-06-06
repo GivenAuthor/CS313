@@ -1,8 +1,8 @@
 <?php
 
-$date = $_POST[date];
-$rate = $_POST[rating];
-$note = $_POST[note];
+$date = $_GET[date];
+$rate = $_GET[rating];
+$note = $_GET[note];
 echo("<p>$date $rate $note</p>");
 
 echo("
