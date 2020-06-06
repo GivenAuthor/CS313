@@ -37,15 +37,18 @@ try
   try
   {
     $queryDay = $db->prepare('SELECT * FROM day');
-    $responseDay = $queryDay->execute();
+    $queryDay->execute();
+    $responseDay = $queryDay->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($responseDay);
 
     $queryRating = $db->prepare('SELECT * FROM rating');
-    $responseRating = $queryRating->execute();
+    $queryRating->execute();
+    $responseRating = $queryRating->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($responseRating);
 
     $queryNote = $db->prepare('SELECT * FROM note');
-    $resonseNote = $queryNote->execute();
+    $queryNote->execute();
+    $resonseNote = $queryNote->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($responseNote);
 
   }
