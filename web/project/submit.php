@@ -10,13 +10,13 @@ echo("
 <body>
     <form method='get' action='submitted.php'>
     <label for='date'>Date:</label>
-    <input type='date' id='date'>
+    <input type='date' id='date name='date'>
     <br>
     <label for='rating'>Day rating:</label>
-    <input type='number' id='rating'>
+    <input type='number' id='rating' name='rating'>
     <br>
     <label for='note'>Note info:</label>
-    <input type='text' id='note'>
+    <input type='text' id='note' name='note'>
     <br>
     <button type='submit'>Submit</button>
     </form>
