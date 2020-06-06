@@ -1,4 +1,7 @@
 <?php
+
+echo $_GET['note'];
+
 echo("
 <!DOCTYPE html>
 <html lang='en'>
@@ -13,7 +16,30 @@ echo("
     <button type='submit'>To homepage</button>
     </form>
 ");
-    //$date = $_POST['date'];
+
+try
+{
+  session_name('daytracking');
+  session_start();
+  $dbUrl = getenv('DATABASE_URL');
+  $dbOpts = parse_url($dbUrl);
+  $dbHost = $dbOpts["host"];
+  $dbPort = $dbOpts["port"];
+  $dbUser = $dbOpts["user"];
+  $dbPassword = $dbOpts["pass"];
+  $dbName = ltrim($dbOpts["path"],'/');
+    
+  $user = 'postgres';
+  $password = '1Wickles';
+  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  }
+  catch (PDOException $ex)
+  {
+    echo 'Error!: ' . $ex->getMessage();
+    die();
+  }
+    $date = $_POST['date'];
     $rate = $_POST['rating'];
     $note = $_POST['note'];
     echo("<p>$date $rate $note</p>");
