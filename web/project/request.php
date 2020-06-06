@@ -34,6 +34,10 @@ try
     die();
   }
 
+  $sql = "SELECT day_date FROM day";
+  $result = $db->query($sql);
+  echo($result);
+
   $stmt = $this->pdo->query('SELECT day_date FROM day');
   $days = $stmt->fetchAll(PDO::FETCH_ASSOC);
   echo($days);
