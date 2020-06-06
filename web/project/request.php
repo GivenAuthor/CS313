@@ -34,6 +34,26 @@ try
     die();
   }
 
+  try
+  {
+    $queryDay = $db->prepare('SELECT * FROM day');
+    $queryDay->execute();
+    echo json_encode($queryDay);
+
+    $queryRating = $db->prepare('SELECT * FROM rating');
+    $queryRating->execute();
+    echo json_encode($queryRating);
+
+    $queryNote = $db->prepare('SELECT * FROM note');
+    $queryNote->execute();
+    echo json_encode($queryNote);
+
+  }
+  catch (PDOException $ex) {
+
+  }
+
+  /*
   $sql = "SELECT day_date FROM day";
   $result = $db->query($sql);
   echo json_encode($result);
@@ -45,6 +65,7 @@ try
   $sql = "SELECT note_contents FROM note WHERE note_id = note_id";
   $result = $db->query($sql);
   echo json_encode($result);
+  */
 
 echo("</body></html>");
 ?>
