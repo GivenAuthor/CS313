@@ -1,4 +1,5 @@
 <?php
+/*
 echo("
 <!DOCTYPE html>
 <html lang='en'>
@@ -10,8 +11,7 @@ echo("
     <form method='POST' action='home.php'>
     <button type='submit'>To homepage</button>
     </form>
-");
-
+");*/
     $date = $_POST[date];
     $rate = $_POST[rating];
     $note = $_POST[note];
