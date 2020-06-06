@@ -1,6 +1,6 @@
 <?php
  
- $date = $_GET['date'];
+ $date = $_GET['date'].toString();
  $rate = $_GET['rating'];
  $note = $_GET['note'];
  echo($rate);
