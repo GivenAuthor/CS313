@@ -43,7 +43,7 @@ try
     // insert the rating for the day
     try {
         $sql = $db->prepare('INSERT INTO rating (day_rating) VALUES ($rate);');
-        $stmt = mysqli_prepare($sql);
+        //$stmt = mysqli_prepare($sql);
         $sql->execute([$rating]);
         // redirect here
 
