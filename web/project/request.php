@@ -9,8 +9,6 @@ echo("
 </head>
 <body>
     <h1>Previous day's data</h1>
-</body>
-</html>
 ");
     // get dates, ratings, and notes
     $query = $db->prepare('SELECT * FROM day');
@@ -31,4 +29,5 @@ echo("
         $note = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo("<br>");
         echo($note);
+echo("</body></html>")
 ?>
