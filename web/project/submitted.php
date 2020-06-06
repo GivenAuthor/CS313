@@ -70,6 +70,7 @@ try
         }
 
         try {
+            $date = new DateTime($date);
             $sql = $db->prepare("INSERT INTO day (day_date) VALUES (TO_DATE(?, 'DD/MM/YYYY')");
             $sql->execute([$date]);
             // redirect here.
