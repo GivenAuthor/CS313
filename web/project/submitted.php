@@ -52,7 +52,7 @@ try
         echo "<p>rating aded</p>";
         }
     catch(PDOException $e) {
-        echo $sql . "<br>" . $e->getMessage();
+        echo $e->getMessage();
     }
 
     // insert the notes for the day
@@ -66,7 +66,7 @@ try
         echo "<p>note added</p>";
         }
         catch(PDOException $e) {
-            echo $sql . "<br>" . $e->getMessage();
+            echo $e->getMessage();
         }
 
         try {
@@ -79,7 +79,7 @@ try
             echo "<p>date added</p>";
             }
         catch(PDOException $e) {
-            echo $sql . "<br>" . $e->getMessage();
+            echo $e->getMessage();
         }
     echo('<p>Submitted</p></body></html>');
 ?>
