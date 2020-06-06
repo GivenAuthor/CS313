@@ -8,24 +8,22 @@ echo("
     <title>Info</title>
 </head>
 <body>
-    <h1>Previous data</h1>
-    <form method='post' action'getData()'>
-    <input type='submit' value='fetch data'> 
-    </form>
+    <h1>Previous day's data</h1>
 </body>
 </html>
 ");
-
-function getData() {
-
     // get dates, ratings, and notes
         $stmt = $this->pdo->query('SELECT * FROM day');
         $days = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo($days);
 
         $stmt1 = $this->pdo->query('SELECT * FROM rating WHERE rating_id = day_id');
         $rating = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo("<br>");
+        echo($rating);
 
         $stmt1 = $this->pdo->query('SELECT * FROM note WHERE note_id = note_id');
         $note = $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
+        echo("<br>");
+        echo($note);
 ?>
