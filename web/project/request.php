@@ -38,7 +38,7 @@ try
   $result = $db->query($sql);
   echo json_encode($result);
 
-  $sql = "SELECT day_rating WHERE rating_id = day_id";
+  $sql = "SELECT day_rating FROM rating WHERE rating_id = day_id";
   $result = $db->query($sql);
   echo json_encode($result);
 
