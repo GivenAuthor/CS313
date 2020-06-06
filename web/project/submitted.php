@@ -15,6 +15,7 @@ echo("
     $date = $_POST[date];
     $rate = $_POST[rating];
     $note = $_POST[note];
+    echo("<p>$date $rate $note</p>");
 
     // insert the date
     try {
