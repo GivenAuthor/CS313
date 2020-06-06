@@ -39,14 +39,12 @@ try
     $date = $_GET['date'];
     $rate = $_GET['rating'];
     $note = $_GET['note'];
-    echo($rate);
-    echo($note);
 
     // insert the date
     try {
         $sql = "INSERT INTO day (day_date) VALUES ($date)";
         $conn->exec($sql);
-        echo "date added";
+        echo "<p>date added</p>";
         }
     catch(PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
@@ -56,7 +54,7 @@ try
     try {
         $sql = "INSERT INTO rating (day_rating) VALUES ($rating)";
         $conn->exec($sql);
-        echo "rating aded";
+        echo "<p>rating aded</p>";
         }
     catch(PDOException $e) {
          echo $sql . "<br>" . $e->getMessage();
