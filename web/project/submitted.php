@@ -36,9 +36,11 @@ try
     echo 'Error!: ' . $ex->getMessage();
     die();
   }
-    $date = $_GET['date'];
+  $date = date('Y-m-d', strtotime($_GET['date']));
+    //$date = $_GET['date'];
     $rate = $_GET['rating'];
     $note = $_GET['note'];
+    echo($date);
 
     // insert the date
     try {
