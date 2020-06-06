@@ -36,7 +36,9 @@ try
 
   $sql = "SELECT day_date FROM day";
   $result = $db->query($sql);
-  echo json_encode($result);
+  while($row = $result->fetch_array()){
+    echo $row['day_date'];
+}
 
   $stmt = $this->pdo->query('SELECT day_date FROM day');
   $days = $stmt->fetchAll(PDO::FETCH_ASSOC);
