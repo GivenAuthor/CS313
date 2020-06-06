@@ -38,17 +38,13 @@ try
   $result = $db->query($sql);
   echo json_encode($result);
 
-  $stmt = $this->pdo->query('SELECT day_date FROM day');
-  $days = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  echo json_encode($days);
+  $sql = "SELECT day_rating WHERE rating_id = day_id";
+  $result = $db->query($sql);
+  echo json_encode($result);
 
-  $stmt1 = $this->pdo->query('SELECT day_rating FROM rating WHERE rating_id = day_id');
-  $rating = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  echo($rating);
-
-  $stmt1 = $this->pdo->query('SELECT note_contents FROM note WHERE note_id = note_id');
-  $note = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  echo($note);
+  $sql = "SELECT note_contents FROM note WHERE note_id = note_id";
+  $result = $db->query($sql);
+  echo json_encode($result);
 
 echo("</body></html>");
 ?>
