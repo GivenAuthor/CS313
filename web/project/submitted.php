@@ -1,7 +1,5 @@
 <?php
 
-echo $_GET['note'];
-
 echo("
 <!DOCTYPE html>
 <html lang='en'>
@@ -39,10 +37,9 @@ try
     echo 'Error!: ' . $ex->getMessage();
     die();
   }
-    $date = $_POST['date'];
-    $rate = $_POST['rating'];
-    $note = $_POST['note'];
-    echo("<p>$date $rate $note</p>");
+    $date = $_GET['date'];
+    $rate = $_GET['rating'];
+    $note = $_GET['note'];
 
     // insert the date
     try {
@@ -73,5 +70,5 @@ try
         catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
-    echo('<p>Submitted</p></body></html>');
+    ec ho('<p>Submitted</p></body></html>');
 ?>
