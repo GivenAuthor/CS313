@@ -26,8 +26,8 @@ try
   $dbPassword = $dbOpts["pass"];
   $dbName = ltrim($dbOpts["path"],'/');
     
-  $user = 'miryuwcdxtqwty';
-  $password = '1144860447695f081b648c1b623a6bd928379c4a3093e3861812adf0dd057dd1';
+  $user = 'postgres';
+  $password = '1Wickles';
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }
