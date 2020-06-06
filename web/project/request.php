@@ -34,15 +34,15 @@ try
     die();
   }
 
-  $stmt = $this->pdo->query('SELECT * FROM day');
+  $stmt = $this->pdo->query('SELECT day_date FROM day');
   $days = $stmt->fetchAll(PDO::FETCH_ASSOC);
   echo($days);
 
-  $stmt1 = $this->pdo->query('SELECT * FROM rating WHERE rating_id = day_id');
+  $stmt1 = $this->pdo->query('SELECT day_rating FROM rating WHERE rating_id = day_id');
   $rating = $stmt->fetchAll(PDO::FETCH_ASSOC);
   echo($rating);
 
-  $stmt1 = $this->pdo->query('SELECT * FROM note WHERE note_id = note_id');
+  $stmt1 = $this->pdo->query('SELECT note_contents FROM note WHERE note_id = note_id');
   $note = $stmt->fetchAll(PDO::FETCH_ASSOC);
   echo($note);
 
