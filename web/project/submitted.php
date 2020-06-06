@@ -3,8 +3,9 @@
  $date = $_GET['date'];
  $rate = $_GET['rating'];
  $note = $_GET['note'];
- echo($date);
- echo($_GET['date']);
+ echo($rate);
+ echo($_GET['rating']);
+
 
 echo("
 <!DOCTYPE html>
