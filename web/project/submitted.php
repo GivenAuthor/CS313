@@ -1,4 +1,10 @@
 <?php
+ 
+ $date = $_GET['date'];
+ $rate = $_GET['rating'];
+ $note = $_GET['note'];
+ echo($date);
+ echo($_GET['date']);
 
 echo("
 <!DOCTYPE html>
