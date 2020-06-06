@@ -22,6 +22,8 @@ echo("
 
 try
     {
+        session_name('daytracking');
+        session_start();
         $dbUrl = getenv('DATABASE_URL');
 
         $dbOpts = parse_url($dbUrl);
