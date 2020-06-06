@@ -13,7 +13,7 @@ echo("
     <button type='submit'>To homepage</button>
     </form>
 ");
-    $date = $_POST['date'];
+    //$date = $_POST['date'];
     $rate = $_POST['rating'];
     $note = $_POST['note'];
     echo("<p>$date $rate $note</p>");
@@ -42,7 +42,7 @@ echo("
     try {
         $sql = "INSERT INTO note (note_contents) VALUES ($note)";
         $conn->exec($sql);
-        echo "note added";
+        echo "<p>note added</p>";
         }
         catch(PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
