@@ -27,14 +27,12 @@ try
   $password = '1Wickles';
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  
 }
   catch (PDOException $ex)
   {
     echo 'Error!: ' . $ex->getMessage();
     die();
   }
-  /*
 
   $stmt = $this->pdo->query('SELECT * FROM day');
   $days = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -42,13 +40,11 @@ try
 
   $stmt1 = $this->pdo->query('SELECT * FROM rating WHERE rating_id = day_id');
   $rating = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  echo("<br>");
   echo($rating);
 
   $stmt1 = $this->pdo->query('SELECT * FROM note WHERE note_id = note_id');
   $note = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  echo("<br>");
   echo($note);
-  */
-echo("</body></html>")
+
+echo("</body></html>");
 ?>
