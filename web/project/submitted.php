@@ -1,4 +1,10 @@
 <?php
+
+$date = $_POST[date];
+$rate = $_POST[rating];
+$note = $_POST[note];
+echo("<p>$date $rate $note</p>");
+
 echo("
 <!DOCTYPE html>
 <html lang='en'>
