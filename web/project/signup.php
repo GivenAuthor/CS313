@@ -23,20 +23,6 @@ echo("
 </html>
 ");
 
-function signUp() {
-    try
-{
-    // REPLACE THIS WITH ENTERED INFO
-  $user = 'postgres';
-  $password = 'password';
-  $db = new PDO('pgsql:host=localhost;dbname=postgresql-fitted-13004', $user, $password);
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
-
 // with given info from user
     $username = $_POST["username"];
     $password = $_POST["password"];

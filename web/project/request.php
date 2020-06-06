@@ -18,20 +18,6 @@ echo("
 
 function getData() {
 
-// connect
-    try
-    {
-        // REPLACE THIS WITH ENTERED INFO
-      $user = 'postgres';
-      $password = 'password';
-      $db = new PDO('pgsql:host=localhost;dbname=postgresql-fitted-13004', $user, $password);
-    }
-    catch (PDOException $ex)
-    {
-      echo 'Error!: ' . $ex->getMessage();
-      die();
-    }
-
     // get dates, ratings, and notes
         $stmt = $this->pdo->query('SELECT * FROM day');
         $days = $stmt->fetchAll(PDO::FETCH_ASSOC);
