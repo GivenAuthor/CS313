@@ -42,7 +42,7 @@ try
 
     // insert the rating for the day
     try {
-        $sql = $db->prepare('INSERT INTO rating (day_rating) VALUES (?)');
+        $sql = $db->prepare('INSERT INTO rating (day_rating) VALUES ($rate)');
         $stmt = mysqli_prepare($sql);
         //$sql->execute([$rating]);
         $stmt->execute();
@@ -58,7 +58,7 @@ try
 
     // insert the notes for the day
     try {
-        $sql = $db->prepare('INSERT INTO note (note_contents) VALUES (?)');
+        $sql = $db->prepare('INSERT INTO note (note_contents) VALUES ($note)');
         $sql->execute([$note]);
         // redirect here
 
@@ -71,7 +71,7 @@ try
         }
 
         try {
-            $sql = $db->prepare('INSERT INTO day (day_date) VALUES (?)');
+            $sql = $db->prepare("INSERT INTO day (day_date) VALUES (TO_DATE($date, 'DD/MM/YYYY')");
             $sql->execute([$date]);
             // redirect here.
     
